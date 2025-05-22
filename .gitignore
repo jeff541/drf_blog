@@ -1,0 +1,27 @@
+# Fichiers/Dossiers sensibles
+.env
+*.env
+#modules
+node_modules
+media
+# Environnement virtuel
+env/
+venv/
+ENV/
+data/
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# Fichiers de log
+*.log
+
+# Fichiers temporaires
+*.tmp
+*.swp
+
+# Dossier de config local
+.idea/
+.vscode/
