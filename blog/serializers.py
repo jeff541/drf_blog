@@ -32,7 +32,7 @@ class BlogSerializer(serializers.ModelSerializer):
     author = SimpleAuthorSerializer(read_only=True)
     class Meta:
         model = Blog
-        fields = fields = [
+        fields = [
     'title',
     'slug',
     'content',
