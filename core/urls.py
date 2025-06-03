@@ -31,7 +31,7 @@ schema_view = get_schema_view(
    openapi.Info(
       title="Card blog- API",
       default_version='v1',
-      description="ceci est l'api du site camyshop",
+      description="ceci est un site de partage de carte",
       contact=openapi.Contact(email="jeffrudy54@gmail.com"),
       license=openapi.License(name="BSD License"),
    ),
