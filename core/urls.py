@@ -29,7 +29,7 @@ from rest_framework_simplejwt.views import (
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Camysho- API",
+      title="Card blog- API",
       default_version='v1',
       description="ceci est l'api du site camyshop",
       contact=openapi.Contact(email="jeffrudy54@gmail.com"),
