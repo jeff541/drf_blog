@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ["*"]
 
 CORS_ALLOWED_ORIGINS = [
     "http://192.168.1.103:4201",
-    "https://cardblog.mbiada.site",
+    "https://blog.mbiada.site",
 ]
 
 # Application definition
