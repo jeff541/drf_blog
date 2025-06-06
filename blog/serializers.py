@@ -37,10 +37,7 @@ class BlogSerializer(serializers.ModelSerializer):
     'slug',
     'content',
     'author',
-    'created_at',
-    'updated_at',
     'published_date',
-    'is_draft',
     'category',
     'feature_image',
 ]

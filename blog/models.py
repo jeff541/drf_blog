@@ -50,6 +50,6 @@ class Blog(models.Model):
             slug = f'{base_slug}-{num}'
             num +=1
         self.slug = slug
-        if not self.is_draft and self.published_date is None:
+        if  self.is_draft and self.published_date is None:
             self.published_date = timezone.now()
         return super().save(*args, **kwargs)
