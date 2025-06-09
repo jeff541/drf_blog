@@ -1,10 +1,29 @@
 from django.shortcuts import render
 from .serializers import UserRegistrationSerializer,BlogSerializer, UserProfileSerializer
 from rest_framework.response import Response
+from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
+from django.contrib.auth import get_user_model
 from rest_framework.decorators import api_view, permission_classes
 from .models import Blog
+
+
+
+class CustomTokenObtainPairView(TokenObtainPairView):
+    def post(self, request, *args, **kwargs):
+        response = super().post(request, *args, **kwargs)
+        
+        if response.status_code == 200:
+            user = get_user_model().objects.get(username=request.data['username'])
+            serializer = UserProfileSerializer(user)
+            response.data['user'] = serializer.data
+            
+        return response
+
+
+
+
 @api_view(["POST"])
 def register_user(request):
     serializer = UserRegistrationSerializer(data= request.data)
